@@ -52,8 +52,8 @@ namespace WebAPI.Service
                 throw new Exception("Insert a positive value please");  
 
             if(machineModel.LastMaintenance != null)  
-                if(DateTime.Compare(machineModel.LastMaintenance.Value, DateTime.Now) > 0)
-                    throw new Exception("Last Maintenance date can't be in the future"); 
+                if(DateTime.Compare(machineModel.LastMaintenance.Value.Date, DateTime.Now.Date) >= 0)
+                    throw new Exception("Last Maintenance date must always be in the past"); 
 
             //Check that the inserted manufacturer ID exists in the system
             List<int> allIDs = _manufacturerRepository.getAllIDs();
