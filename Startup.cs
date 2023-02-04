@@ -40,8 +40,10 @@ namespace WebAPI
         }
 
         public void ConfigureControllers(IServiceCollection services)
-        {
-            services.AddControllers();
+        {            
+            services.AddControllers()
+                    .AddNewtonsoftJson(x => 
+                        x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
         }
 
         public void ConfigureDBConnetion(IServiceCollection services)
@@ -54,6 +56,8 @@ namespace WebAPI
         {
             services.AddScoped<IManufacturerService, ManufacturerService>();
             services.AddScoped<IManufacturerRepository, ManufacturerRepository>();
+            services.AddScoped<IMachineService, MachineService>();
+            services.AddScoped<IMachineRepository, MachineRepository>();
         }
 
         public void ConfigureAutoMapper(IServiceCollection services)

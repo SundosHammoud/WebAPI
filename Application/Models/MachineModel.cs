@@ -14,6 +14,6 @@ namespace WebAPI.Application.Models
            
         public int ManufacturerID {get; set;}
 
-        public ManufacturerModel ManufacturerModel {get; set;}
+        public ManufacturerModel Manufacturer {get; set;}
     }
 }

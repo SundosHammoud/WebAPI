@@ -24,11 +24,10 @@ namespace WebAPI.Infrastructure
         {
             var manufacturer = _context.Manufacturer
                                     .Include(x => x.Machines)
-                                    .FirstOrDefault(x => x.ID == ID);
-
+                                    .FirstOrDefault(x => x.ID == ID);    
             if(manufacturer == null)
                 throw new Exception("Manufacturer not found");
-            
+                
             return manufacturer;
         }
 
@@ -56,6 +55,11 @@ namespace WebAPI.Infrastructure
             
             _context.Remove(oldEntity);
             _context.SaveChanges();
+        }
+
+        public List<int> getAllIDs()
+        {
+            return _context.Manufacturer.Select(x => x.ID).ToList();
         }
 
         

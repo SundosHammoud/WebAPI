@@ -12,6 +12,7 @@ namespace WebAPI.Infrastructure
         Manufacturer add(Manufacturer manufacturer);
         Manufacturer update(Manufacturer manufacturer);
         void delete(int ID);
+        List<int> getAllIDs();
 
         
     }

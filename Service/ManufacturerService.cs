@@ -44,7 +44,7 @@ namespace WebAPI.Service
         public void validateModel(ManufacturerModel manufacturerModel)
         {
             if(String.IsNullOrEmpty(manufacturerModel.Name))
-                throw new Exception();                        
+                throw new Exception("Insert a valid name please");                        
         }
 
         public ManufacturerModel update(ManufacturerModel manufacturerModel)
@@ -57,7 +57,7 @@ namespace WebAPI.Service
         }
 
         public void delete(int ID)
-        {
+        {   
             _manufacturerRepository.delete(ID);
         }
 
