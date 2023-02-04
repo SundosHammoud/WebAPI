@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using ceconsoftAPI.Service;
-using ceconsoftAPI.Domain;
-using ceconsoftAPI.Application.Models;
+using WebAPI.Service;
+using WebAPI.Domain;
+using WebAPI.Application.Models;
 
 
 namespace ceconsoftAPI.Application.Controllers

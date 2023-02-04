@@ -1,7 +1,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 
-namespace ceconsoftAPI.Domain
+namespace WebAPI.Domain
 {
     public class MyContext : DbContext
     {

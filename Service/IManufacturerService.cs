@@ -1,9 +1,9 @@
 using System;
-using ceconsoftAPI.Domain;
+using WebAPI.Domain;
 using System.Collections.Generic;
-using ceconsoftAPI.Application.Models;
+using WebAPI.Application.Models;
 
-namespace ceconsoftAPI.Service
+namespace WebAPI.Service
 {
     public interface IManufacturerService    
     {

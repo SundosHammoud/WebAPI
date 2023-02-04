@@ -1,8 +1,8 @@
 using AutoMapper;
-using ceconsoftAPI.Application.Models;
-using ceconsoftAPI.Domain;
+using WebAPI.Application.Models;
+using WebAPI.Domain;
 
-namespace ceconsoftAPI.Application.MapperProfiles
+namespace WebAPI.Application.MapperProfiles
 {
     public class MachineProfile: Profile
     {

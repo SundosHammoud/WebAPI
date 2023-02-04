@@ -1,6 +1,6 @@
 using System;
 
-namespace ceconsoftAPI.Application.Models
+namespace WebAPI.Application.Models
 {
     public class MachineModel
     {      

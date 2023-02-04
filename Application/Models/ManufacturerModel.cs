@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ceconsoftAPI.Application.Models
+namespace WebAPI.Application.Models
 {
     public class ManufacturerModel
     {        

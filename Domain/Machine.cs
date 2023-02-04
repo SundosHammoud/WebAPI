@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ceconsoftAPI.Domain
+namespace WebAPI.Domain
 {
     public class Machine
     {

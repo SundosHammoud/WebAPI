@@ -11,13 +11,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authentication;
-using ceconsoftAPI.Service;
-using ceconsoftAPI.Domain;
+using WebAPI.Service;
+using WebAPI.Domain;
 using Microsoft.EntityFrameworkCore;
-using ceconsoftAPI.Infrastructure;
+using WebAPI.Infrastructure;
 using AutoMapper;
 
-namespace ceconsoftAPI
+namespace WebAPI
 {
     public class Startup
     {

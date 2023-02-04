@@ -22,7 +22,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "ceconsoftAPI/1.0.0": {
+      "WebAPI/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Contrib.Autofac.DependencyInjection": "7.1.0",
@@ -301,10 +301,10 @@
           "WindowsBase": "4.0.0.0"
         },
         "runtime": {
-          "ceconsoftAPI.dll": {}
+          "WebAPI.dll": {}
         },
         "compile": {
-          "ceconsoftAPI.dll": {}
+          "WebAPI.dll": {}
         }
       },
       "Autofac/6.5.0": {
@@ -2256,7 +2256,7 @@
     }
   },
   "libraries": {
-    "ceconsoftAPI/1.0.0": {
+    "WebAPI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

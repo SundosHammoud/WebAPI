@@ -959,9 +959,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Ceconsoft Task\\ceconsoftAPI\\ceconsoftAPI.csproj",
-      "projectName": "ceconsoftAPI",
-      "projectPath": "H:\\Ceconsoft Task\\ceconsoftAPI\\ceconsoftAPI.csproj",
+      "projectUniqueName": "H:\\Ceconsoft Task\\ceconsoftAPI\\WebAPI.csproj",
+      "projectName": "WebAPI",
+      "projectPath": "H:\\Ceconsoft Task\\ceconsoftAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
       "outputPath": "H:\\Ceconsoft Task\\ceconsoftAPI\\obj\\",
       "projectStyle": "PackageReference",

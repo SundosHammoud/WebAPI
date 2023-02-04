@@ -1,8 +1,8 @@
 using System;
-using ceconsoftAPI.Domain;
+using WebAPI.Domain;
 using System.Collections.Generic;
 
-namespace ceconsoftAPI.Infrastructure
+namespace WebAPI.Infrastructure
 {
     public interface IManufacturerRepository    
     {

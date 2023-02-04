@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using ceconsoftAPI.Domain;
+using WebAPI.Domain;
 
-namespace ceconsoftAPI.Migrations
+namespace WebAPI.Migrations
 {
     [DbContext(typeof(MyContext))]
     partial class MyContextModelSnapshot : ModelSnapshot
@@ -19,7 +19,7 @@ namespace ceconsoftAPI.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("ceconsoftAPI.Domain.Machine", b =>
+            modelBuilder.Entity("WebAPI.Domain.Machine", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -46,7 +46,7 @@ namespace ceconsoftAPI.Migrations
                     b.ToTable("Machine");
                 });
 
-            modelBuilder.Entity("ceconsoftAPI.Domain.Manufacturer", b =>
+            modelBuilder.Entity("WebAPI.Domain.Manufacturer", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -66,9 +66,9 @@ namespace ceconsoftAPI.Migrations
                     b.ToTable("Manufacturer");
                 });
 
-            modelBuilder.Entity("ceconsoftAPI.Domain.Machine", b =>
+            modelBuilder.Entity("WebAPI.Domain.Machine", b =>
                 {
-                    b.HasOne("ceconsoftAPI.Domain.Manufacturer", "Manufacturer")
+                    b.HasOne("WebAPI.Domain.Manufacturer", "Manufacturer")
                         .WithMany("Machines")
                         .HasForeignKey("ManufacturerID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -77,7 +77,7 @@ namespace ceconsoftAPI.Migrations
                     b.Navigation("Manufacturer");
                 });
 
-            modelBuilder.Entity("ceconsoftAPI.Domain.Manufacturer", b =>
+            modelBuilder.Entity("WebAPI.Domain.Manufacturer", b =>
                 {
                     b.Navigation("Machines");
                 });

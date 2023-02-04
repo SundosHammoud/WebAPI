@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace ceconsoftAPI.Migrations
+namespace WebAPI.Migrations
 {
     public partial class init : Migration
     {
