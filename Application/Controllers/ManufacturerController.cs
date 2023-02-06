@@ -11,6 +11,7 @@ using WebAPI.Application.Models;
 
 namespace ceconsoftAPI.Application.Controllers
 {
+    [ApiKeyAuthentication]
     [ApiController]
     [Route("api/[controller]")]
     public class ManufacturerController : Controller

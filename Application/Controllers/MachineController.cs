@@ -7,10 +7,11 @@ using Microsoft.Extensions.Logging;
 using WebAPI.Service;
 using WebAPI.Domain;
 using WebAPI.Application.Models;
-
+using WebAPI.Application.Filters;
 
 namespace ceconsoftAPI.Application.Controllers
 {
+    [ApiKeyAuthentication]
     [ApiController]
     [Route("api/[controller]")]
     public class MachineController : Controller
