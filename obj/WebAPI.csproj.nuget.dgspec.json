@@ -1,29 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Ceconsoft Task\\ceconsoftAPI\\WebAPI.csproj": {}
+    "H:\\Ceconsoft Task\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "H:\\Ceconsoft Task\\ceconsoftAPI\\WebAPI.csproj": {
+    "H:\\Ceconsoft Task\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Ceconsoft Task\\ceconsoftAPI\\WebAPI.csproj",
+        "projectUniqueName": "H:\\Ceconsoft Task\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "H:\\Ceconsoft Task\\ceconsoftAPI\\WebAPI.csproj",
+        "projectPath": "H:\\Ceconsoft Task\\WebAPI\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "H:\\Ceconsoft Task\\ceconsoftAPI\\obj\\",
+        "outputPath": "H:\\Ceconsoft Task\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -35,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -73,10 +77,21 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.32, 3.1.32]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -85,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using WebAPI.Service;
 using WebAPI.Domain;
 using WebAPI.Application.Models;
-
+using WebAPI.Application.Filters;
 
 namespace ceconsoftAPI.Application.Controllers
 {
