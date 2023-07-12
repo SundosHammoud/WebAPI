@@ -10,7 +10,7 @@ using WebAPI.Domain;
 namespace WebAPI.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20230711014202_init")]
+    [Migration("20230712004005_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

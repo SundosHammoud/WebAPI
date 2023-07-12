@@ -8,10 +8,11 @@ using WebAPI.Service;
 using WebAPI.Domain;
 using WebAPI.Application.Models;
 using WebAPI.Application.Filters;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ceconsoftAPI.Application.Controllers
 {
-    [ApiKeyAuthentication]
+    [Authorize(Roles = "Admin, User")]
     [ApiController]
     [Route("api/[controller]")]
     public class ManufacturerController : Controller

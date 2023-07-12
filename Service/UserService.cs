@@ -8,6 +8,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Text.RegularExpressions;
 
 namespace WebAPI.Service
 {
@@ -27,7 +28,7 @@ namespace WebAPI.Service
             string jwt = "";
             var existedUser = _userRepository.getUserByEmailAndPassword(user);
             if(existedUser == null)
-                throw new Exception("wroing credentials!");
+                throw new Exception("wrong credentials!");
             
             jwt = createToken(existedUser);
             return jwt;
@@ -40,7 +41,6 @@ namespace WebAPI.Service
                 new Claim(ClaimTypes.Role, user.Role.Name),
             };
 
-            //var x = new Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ"));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
             var token = new JwtSecurityToken(claims: claims, expires: DateTime.Now.AddDays(1), signingCredentials: creds);
@@ -73,7 +73,13 @@ namespace WebAPI.Service
         public void validateModel(UserModel userModel)
         {
             if(String.IsNullOrEmpty(userModel.Name))
-                throw new Exception("Insert a valid name please");                        
+                throw new Exception("Insert a valid name please");
+                 
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(userModel.Email);
+            if (!match.Success)
+                throw new Exception("Email format is wrong");
+                          
         }
 
         public UserModel update(UserModel userModel)

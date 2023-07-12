@@ -9,10 +9,13 @@ using WebAPI.Domain;
 using WebAPI.Application.Models;
 using WebAPI.Application.Filters;
 using Microsoft.AspNetCore.Authorization;
+using System.Text.Encodings.Web;
+using static System.Net.Mime.MediaTypeNames;
+using System.Buffers.Text;
 
 namespace ceconsoftAPI.Application.Controllers
 {
-    [ApiKeyAuthentication]
+    [Authorize(Roles = "Admin")]
     [ApiController]
     [Route("api/[controller]")]
     public class MachineController : Controller
@@ -24,7 +27,7 @@ namespace ceconsoftAPI.Application.Controllers
             _machineService = machineService;
         }
 
-        [HttpGet, Authorize(Roles = "Admin")]
+        [HttpGet]
         public ActionResult Get()
         {
             try
