@@ -14,6 +14,7 @@ namespace WebAPI.Application.Filters
 
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
+            /*
             if(!context.HttpContext.Request.Headers.TryGetValue(apiKeyHeaderName, out var potentialKey))
             {
                 context.Result = new UnauthorizedResult();
@@ -28,6 +29,7 @@ namespace WebAPI.Application.Filters
                 context.Result = new UnauthorizedResult();
                 return;              
             }
+            */
             
             await next();
         }

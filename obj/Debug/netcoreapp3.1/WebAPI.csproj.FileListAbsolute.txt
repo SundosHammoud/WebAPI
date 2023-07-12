@@ -93,7 +93,6 @@ H:\Ceconsoft Task\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\WebAPI.StaticWe
 H:\Ceconsoft Task\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.dll
 H:\Ceconsoft Task\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.pdb
 H:\Ceconsoft Task\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.genruntimeconfig.cache
-H:\Ceconsoft Task\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.StaticWebAssets.xml
 H:\Ceconsoft Task\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.AssemblyReference.cache
 H:\Ceconsoft Task\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
 H:\Ceconsoft Task\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\WebAPI.StaticWebAssets.Pack.cache
@@ -101,3 +100,13 @@ H:\Ceconsoft Task\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.WebAPI.
 H:\Ceconsoft Task\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.WebAPI.props
 H:\Ceconsoft Task\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.WebAPI.props
 H:\Ceconsoft Task\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.WebAPI.props
+H:\Ceconsoft Task\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Abstractions.dll
+H:\Ceconsoft Task\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+H:\Ceconsoft Task\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+H:\Ceconsoft Task\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+H:\Ceconsoft Task\WebAPI\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+H:\Ceconsoft Task\WebAPI\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+H:\Ceconsoft Task\WebAPI\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+H:\Ceconsoft Task\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+H:\Ceconsoft Task\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+H:\Ceconsoft Task\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

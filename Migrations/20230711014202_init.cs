@@ -23,6 +23,19 @@ namespace WebAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Role",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Role", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Machine",
                 columns: table => new
                 {
@@ -44,10 +57,38 @@ namespace WebAPI.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "User",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: true),
+                    LastName = table.Column<string>(type: "text", nullable: true),
+                    Email = table.Column<string>(type: "text", nullable: true),
+                    Password = table.Column<string>(type: "text", nullable: true),
+                    RoleID = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_User", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_User_Role_RoleID",
+                        column: x => x.RoleID,
+                        principalTable: "Role",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Machine_ManufacturerID",
                 table: "Machine",
                 column: "ManufacturerID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_User_RoleID",
+                table: "User",
+                column: "RoleID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -56,7 +97,13 @@ namespace WebAPI.Migrations
                 name: "Machine");
 
             migrationBuilder.DropTable(
+                name: "User");
+
+            migrationBuilder.DropTable(
                 name: "Manufacturer");
+
+            migrationBuilder.DropTable(
+                name: "Role");
         }
     }
 }

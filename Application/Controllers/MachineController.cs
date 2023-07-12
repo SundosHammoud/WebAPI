@@ -8,6 +8,7 @@ using WebAPI.Service;
 using WebAPI.Domain;
 using WebAPI.Application.Models;
 using WebAPI.Application.Filters;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ceconsoftAPI.Application.Controllers
 {
@@ -23,7 +24,7 @@ namespace ceconsoftAPI.Application.Controllers
             _machineService = machineService;
         }
 
-        [HttpGet]
+        [HttpGet, Authorize(Roles = "Admin")]
         public ActionResult Get()
         {
             try

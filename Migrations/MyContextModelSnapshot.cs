@@ -66,6 +66,52 @@ namespace WebAPI.Migrations
                     b.ToTable("Manufacturer");
                 });
 
+            modelBuilder.Entity("WebAPI.Domain.Role", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .UseIdentityByDefaultColumn();
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Role");
+                });
+
+            modelBuilder.Entity("WebAPI.Domain.User", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .UseIdentityByDefaultColumn();
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("text");
+
+                    b.Property<int>("RoleID")
+                        .HasColumnType("integer");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("RoleID");
+
+                    b.ToTable("User");
+                });
+
             modelBuilder.Entity("WebAPI.Domain.Machine", b =>
                 {
                     b.HasOne("WebAPI.Domain.Manufacturer", "Manufacturer")
@@ -77,9 +123,25 @@ namespace WebAPI.Migrations
                     b.Navigation("Manufacturer");
                 });
 
+            modelBuilder.Entity("WebAPI.Domain.User", b =>
+                {
+                    b.HasOne("WebAPI.Domain.Role", "Role")
+                        .WithMany("Users")
+                        .HasForeignKey("RoleID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+                });
+
             modelBuilder.Entity("WebAPI.Domain.Manufacturer", b =>
                 {
                     b.Navigation("Machines");
+                });
+
+            modelBuilder.Entity("WebAPI.Domain.Role", b =>
+                {
+                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }
